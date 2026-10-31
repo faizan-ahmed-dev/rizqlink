@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RizqLink.Api/RizqLink.Api.csproj" />
+    <Project Path="src/RizqLink.Core/RizqLink.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RizqLink.Tests/RizqLink.Tests.csproj" />
+  </Folder>
+</Solution>
