@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RizqLink - Listings (Dummy CRUD Form)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>RizqLink</h1>
+    <p>Time-Aware Surplus Food Redistribution and Claim Management System</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 id="form-title">Add Food Listing</h2>
+      <p class="note">Dummy form: data is kept in the browser only and is lost on refresh. It will be connected to the C# backend later.</p>
+
+      <div id="listing-form">
+        <input type="hidden" id="listing-id">
+
+        <label for="title">Food item</label>
+        <input type="text" id="title" placeholder="e.g. Fresh bread rolls">
+
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="Bakery">Bakery</option>
+          <option value="Cooked meals">Cooked meals</option>
+          <option value="Fruits and vegetables">Fruits and vegetables</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="quantity">Quantity (servings)</label>
+        <input type="number" id="quantity" min="1" placeholder="e.g. 20">
+
+        <label for="type">Listing type</label>
+        <select id="type">
+          <option value="Surplus">Surplus (about to expire)</option>
+          <option value="Donation">Direct donation</option>
+        </select>
+
+        <label for="expires">Expiry time</label>
+        <input type="datetime-local" id="expires">
+
+        <p id="error" class="error"></p>
+
+        <div class="buttons">
+          <button type="button" id="save-btn">Save listing</button>
+          <button type="button" id="cancel-btn" class="secondary hidden">Cancel edit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Current Listings</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Food item</th>
+            <th>Category</th>
+            <th>Qty</th>
+            <th>Type</th>
+            <th>Expires</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="listing-body"></tbody>
+      </table>
+      <p id="empty-msg" class="note">No listings yet. Add one above.</p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
